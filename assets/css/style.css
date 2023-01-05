@@ -26,18 +26,141 @@ html {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
 }
-h1 {
-  font-size: 30px;
-  color: var(--light-white);
-  font-weight: 400;
-  background: var(--gradient-blue-purple);
-  text-align: center;
-}
+
 body {
   background: var(--purple);
   color: #fff;
 }
+
 /* ----- Header ----- */
+ header {
+    width: 345px;
+    height: 37px;
+    position: relative;
+    display: grid;
+    margin-top: 2em;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Rubik", sans-serif;
+    background-color: #4b004b;
+   
+ }
+/* ----- Logo ----- */
+
+img {
+    width: 32px;
+    height: 38px;
+    position: absolute;
+}
+
+
+/* ----- Navbar ----- */
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 2em;
+  right: -8em;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  text-decoration: underline;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-call-out: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ededee;
+  border-radius: 3px;
+  z-index: 1;
+  left: 10em;
+  top: -1.75em;
+}
+
+#menu {
+  position: absolute;
+  width: 100px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  right: 6em;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  display: none;
+  background-color: #4b004b;;
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+  display: block;
+}
+
+/* ----- Slogan ----- */
+
+.slogan {
+  margin-top: 2em;
+  position: absolute;
+  font-size: 31px;
+  line-height: 59px;
+  letter-spacing: 3px;
+  text-align: left;
+  color: rgba(226, 225, 231, 1);
+}
+
+.slogan :hover {
+    text-decoration: underline;
+}
+
+.slogan p {
+  font-size: 22px;
+  line-height: 1em;
+  margin-top: -1em;
+  letter-spacing: 1px;
+
+}
+
+.slogan button {
+  border-radius: 14px;
+  border: 1px solid rgba(48, 168, 255, 1);
+  width: 112px;
+  height: 32px;
+  color: rgba(226, 225, 231, 1);
+}
+
+.slogan button:hover{
+  border: 2px solid rgba(48, 168, 255, 1);
+}
+
 
 /* ----- Main ----- */
 div {
