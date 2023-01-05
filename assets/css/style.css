@@ -1,6 +1,38 @@
+/*  Add your styling here */
 
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --purple: #4b004b;
+  --light-blue: #30a8ff;
+  --green-black: #133032;
+  --light-grey: #ededee;
+  --light-white: #e2e1e7;
+  --white: #fff;
+  --transparent-white: rgba(0, 0, 0, 0.75);
+  --gradient-blue-purple: linear-gradient(
+    300deg,
+    rgba(145, 1, 132, 1) 35%,
+    rgba(52, 118, 175, 1) 100%
+  );
+}
 
-/* header */
+html {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  background: var(--purple);
+  color: #fff;
+}
+
+/* ----- Header ----- */
  header {
     width: 345px;
     height: 37px;
@@ -14,7 +46,7 @@
     background-color: #4b004b;
    
  }
-/* logo */
+/* ----- Logo ----- */
 
 img {
     width: 32px;
@@ -23,17 +55,14 @@ img {
 }
 
 
-/* navbar */
-
+/* ----- Navbar ----- */
 
 #menuToggle {
   display: block;
   position: relative;
   top: 2em;
   right: -8em;
-
   z-index: 1;
-
   -webkit-user-select: none;
   user-select: none;
 }
@@ -41,7 +70,6 @@ img {
 #menuToggle a {
   text-decoration: none;
   color: white;
-
   transition: color 0.3s ease;
 }
 
@@ -68,7 +96,6 @@ img {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-
   background: #ededee;
   border-radius: 3px;
   z-index: 1;
@@ -83,7 +110,6 @@ img {
   padding: 50px;
   padding-top: 125px;
   right: 6em;
-
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   display: none;
@@ -99,41 +125,123 @@ img {
   display: block;
 }
 
-/* slogan */
-.slogan{
-    margin-top: 2em;
-    position: absolute;
+/* ----- Slogan ----- */
+
+.slogan {
+  margin-top: 2em;
+  position: absolute;
   font-size: 31px;
   line-height: 59px;
   letter-spacing: 3px;
   text-align: left;
   color: rgba(226, 225, 231, 1);
-
 }
 
-
-
-.slogan :hover{
+.slogan :hover {
     text-decoration: underline;
 }
 
-.slogan p{
-    
-    font-size: 22px;
-    line-height: 1em;
-    margin-top: -1em;
-    letter-spacing: 1px;
+.slogan p {
+  font-size: 22px;
+  line-height: 1em;
+  margin-top: -1em;
+  letter-spacing: 1px;
 
 }
-.slogan button{
-    border-radius: 14px;
-    border: 1px solid rgba(48, 168, 255, 1);
-    width: 112px;
-    height: 32px;
-    color: rgba(226, 225, 231, 1);
-;
-    
+
+.slogan button {
+  border-radius: 14px;
+  border: 1px solid rgba(48, 168, 255, 1);
+  width: 112px;
+  height: 32px;
+  color: rgba(226, 225, 231, 1);
 }
+
 .slogan button:hover{
-    border: 2px solid rgba(48, 168, 255, 1);
+  border: 2px solid rgba(48, 168, 255, 1);
+}
+
+
+/* ----- Main ----- */
+div {
+  font-size: 20px;
+}
+.box {
+  display: grid;
+  justify-items: center;
+  row-gap: 20px;
+  padding: 30px;
+  font-family: Rubik-light;
+  color: #e2e1e7;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: Rubik-Regular;
+  color: #e2e1e7;
+  letter-spacing: 2p;
+}
+.box img {
+  display: grid;
+  width: 50px;
+}
+
+.box span {
+  font-size: 30px;
+}
+.box p {
+  font-size: 15px;
+}
+.box a {
+  font-size: 13px;
+  text-decoration: none;
+  border: 2px solid #30a8ff;
+  border-radius: 25px;
+  font-size: 16px;
+  padding: 10px;
+}
+.box1,
+.box2,
+.box3 {
+  padding: 30px;
+  background: #130325;
+  border-radius: 25px;
+}
+.box2 {
+  background: var(--gradient-blue-purple);
+}
+/* -----Companies----- */
+.companies {
+  display: grid;
+  justify-items: center;
+  row-gap: 20px;
+  padding: 30px;
+  letter-spacing: 4.1px;
+  text-align: center;
+  color: #e2e1e7;
+}
+.companies span {
+  font-size: 30px;
+}
+.companies span > span {
+  font-size: 30px;
+  font-weight: 400;
+  background: linear-gradient(
+    200deg,
+    rgb(253, 253, 253) 10%,
+    rgb(107, 4, 98) 35%,
+    rgb(255, 162, 249) 80%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.companies img {
+  /* display: grid; */
+  grid-template-rows: repeat(2, 1fr);
+  padding: 20px 0;
+  gap: 1.6rem;
+  width: 150px;
+  filter: grayscale(1);
+}
+
+/* -----Desktop----- */
+@media screen and (min-width: 900px) {
 }
