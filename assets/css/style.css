@@ -33,27 +33,25 @@ body {
 }
 
 /* ----- Header ----- */
- header {
-    width: 345px;
-    height: 37px;
-    position: relative;
-    display: grid;
-    margin-top: 2em;
-    margin: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: "Rubik", sans-serif;
-    background-color: #4b004b;
-   
- }
+header {
+  width: 345px;
+  height: 37px;
+  position: relative;
+  display: grid;
+  margin-top: 2em;
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Rubik", sans-serif;
+  background-color: #4b004b;
+}
 /* ----- Logo ----- */
 
 img {
-    width: 32px;
-    height: 38px;
-    position: absolute;
+  width: 32px;
+  height: 38px;
+  position: absolute;
 }
-
 
 /* ----- Navbar ----- */
 
@@ -113,7 +111,7 @@ img {
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   display: none;
-  background-color: #4b004b;;
+  background-color: #4b004b;
 }
 
 #menu li {
@@ -138,7 +136,7 @@ img {
 }
 
 .slogan :hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .slogan p {
@@ -146,21 +144,23 @@ img {
   line-height: 1em;
   margin-top: -1em;
   letter-spacing: 1px;
-
 }
 
-.slogan button {
-  border-radius: 14px;
-  border: 1px solid rgba(48, 168, 255, 1);
+.slogan a {
   width: 112px;
   height: 32px;
+  font-size: 13px;
+  text-decoration: none;
+  border: 2px solid #30a8ff;
+  border-radius: 25px;
+  font-size: 16px;
+  padding: 10px;
   color: rgba(226, 225, 231, 1);
 }
 
-.slogan button:hover{
+.slogan a:hover {
   border: 2px solid rgba(48, 168, 255, 1);
 }
-
 
 /* ----- Main ----- */
 div {
