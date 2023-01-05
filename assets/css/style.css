@@ -241,7 +241,95 @@ div {
   width: 150px;
   filter: grayscale(1);
 }
+/*  Olena */
+/*  ML Development styling */
 
+.development {
+  display: grid;
+  justify-items: start;
+  row-gap: 20px;
+  padding: 30px;
+  letter-spacing: 4.1px;
+  text-align: start;
+  color: #e2e1e7;
+}
+.ML h2 {
+  font-size: 1.87rem;
+  font-weight: 400;
+  line-height: 35.55px;
+  background: radial-gradient(
+      608.3% 608.3% at 91.27% 324.92%,
+      #30a8ff 0%,
+      rgba(255, 4, 255, 0.515767) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.ML h3 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 4.125rem;
+}
+.ML p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.56rem;
+}
+.GetStartedBlock {
+  display: grid;
+  justify-content: center;
+}
+.GetStartedBlock h2 {
+  font-size: 1.87rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2.22rem;
+  letter-spacing: 0.256rem;
+  margin-bottom: 20px;
+  background: radial-gradient(
+      181.29% 181.29% at -42.46% -69.08%,
+      #30a8ff 0%,
+      rgba(232, 0, 232, 0.515767) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.GetStartedBlock {
+  display: grid;
+  justify-items: center;
+  row-gap: 5px;
+  padding: 30px;
+  font-family: Rubik-light;
+  color: #e2e1e7;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: Rubik-Regular;
+  color: #e2e1e7;
+  letter-spacing: 2p;
+}
+.GetStartedBlock a {
+  font-size: 13px;
+  text-decoration: none;
+  border: 2px solid #30a8ff;
+  border-radius: 25px;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+}
+footer {
+  height: 40px;
+  font-size: 0.875rem;
+  padding: 10px 10px;
+  text-align: center;
+}
 /* -----Desktop----- */
 @media screen and (min-width: 900px) {
 }
