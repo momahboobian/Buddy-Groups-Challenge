@@ -11,34 +11,55 @@
   --purple: #4b004b;
   --light-blue: #30a8ff;
   --green-black: #133032;
-  --light-grey: #ededee;
+  --dark-purple: #130325;
+  --light-grey: #9a9a9eba;
   --light-white: #e2e1e7;
   --white: #fff;
   --transparent-white: rgba(0, 0, 0, 0.75);
   --gradient-blue-purple: linear-gradient(
-    300deg,
-    rgba(145, 1, 132, 1) 35%,
+    100deg,
+    rgba(145, 1, 132, 1) 25%,
     rgba(52, 118, 175, 1) 100%
   );
+    --gradient-purple-blue: linear-gradient(
+    100deg,
+     rgba(52, 118, 175, 1)25%,
+    rgba(145, 1, 132, 1) 100%
+  );
+  --gradient-white-purple-pink: linear-gradient(
+    201deg,
+    rgb(253, 253, 253) 10%,
+    rgb(107, 4, 98) 35%,
+    rgb(255, 162, 249) 80%
+  )
 }
 
 html {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
 }
-html h1 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight:normal
+}
+h1 {
   font-size: 2em;
 }
-html h2 {
+h2 {
   font-size: 1.5em;
 }
-html h3 {
+h3 {
   font-size: 1.17em;
 }
 
 body {
   background: var(--purple);
-  color: #fff;
+  color: var(--white);
 }
 
 /* ----- Header ----- */
@@ -49,22 +70,30 @@ header {
 }
 /* ----- Logo ----- */
 
-img {
+.logo {
   width: 50px;
   margin-top: 1rem;
   margin-left: 10px;
 }
 
-/* ----- Humburger menu ----- */
+
+/* ----- Nav menu ----- */
+
+.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* ----- Hamburger menu ----- */
 
 label .menu {
   position: absolute;
-  right: -100px;
-  top: -100px;
-  z-index: 100;
-  width: 200px;
-  height: 200px;
-  border-radius: 50% 50% 50% 50%;
+  right: 10px;
+  top: 20px;
+  z-index: 3;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
@@ -73,11 +102,11 @@ label .menu {
 
 label .hamburger {
   position: absolute;
-  top: 135px;
-  left: 50px;
+  top: 25px;
+  left: 10px;
   width: 30px;
   height: 2px;
-  background: rgba(226, 225, 231, 1);
+  background: var(--light-white);
   display: block;
   transform-origin: center;
   transition: 0.5s ease-in-out;
@@ -98,7 +127,7 @@ label .hamburger:before {
   display: block;
   width: 100%;
   height: 100%;
-  background: rgba(226, 225, 231, 1);
+  background: var(--light-white);
 }
 
 label .hamburger:before {
@@ -111,6 +140,7 @@ label .hamburger:after {
 
 label input {
   display: none;
+
 }
 
 label input:checked + .menu {
@@ -140,7 +170,7 @@ label input:checked + .menu + ul {
 }
 
 label ul {
-  z-index: 200;
+  z-index: 4;
   position: absolute;
   top: 50%; 
   left: 50%;
@@ -154,228 +184,236 @@ label ul {
 label a {
   margin-bottom: 1em;
   display: block;
-  color: rgb(75, 0, 75);
+  color: var(--purple);
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.5em;
-}
-
-/* ----- Slogan ----- */
-
-.slogan {
-  display: grid;
-  justify-items: center;
-  row-gap: 20px;
-  font-size: 31px;
-  letter-spacing: 4.1px;
-  text-align: left;
-  color: rgba(226, 225, 231, 1);
-}
-.boxSlogan {
-  display: grid;
-  justify-items: center;
-  row-gap: 20px;
-  padding: 30px;
-}
-h1 {
-  font-weight: 500;
-}
-h2 {
-  font-weight: 400;
-}
-/* .slogan :hover {
-  text-decoration: underline;
-} */
-
-.slogan p {
-  font-size: 1em;
-  font-style: normal;
-  line-height: 1.5em;
-}
-
-.slogan a {
-  text-decoration: none;
-  border: 2px solid #30a8ff;
-  border-radius: 25px;
-  font-size: 16px;
-  padding: 10px 30px;
-  text-align: center;
-  color: #ededee;
-  font-family: Rubik-Regular;
-}
-
-.slogan a:hover {
-  border: 2px solid rgba(48, 168, 255, 1);
+  font-size: 25px;
 }
 
 /* ----- Main ----- */
-div {
-  font-size: 20px;
+
+main {
+  padding: 30px;
+  color: var(--light-white);
 }
+/* ----- hero ----- */
+
+.hero {
+  grid-area: hero;
+  display: grid;
+  gap: 0px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  padding: 30px 0;
+}
+.hero h1 {
+  font-size: 2.1em;
+}
+
+
+.hero h2 {
+  font-size: 2.1em;
+}
+.hero p {
+  font-size: 20px;
+  padding: 20px 0;
+}
+.hero .pricing {
+  padding: 10px 0;
+
+
+}
+.hero a {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-decoration: none;
+  color: var(--light-white);
+  border: 2px solid var(--light-blue);
+  border-radius: 25px;
+  font-size: 16px;
+
+  font-weight: 400;
+  padding: 10px 20px;
+  color: var(--light-white);
+}
+
+/* ----- Cards ----- */
+.cards {
+  grid-area: card;
+  display: grid;
+  gap: 30px;
+  padding: 20px 0;
+}
+
 .box {
   display: grid;
   justify-items: center;
-  row-gap: 20px;
-  padding: 30px;
-  font-family: Rubik-light;
-  color: #e2e1e7;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+  padding: 15px 30px;
   letter-spacing: 2px;
   text-align: center;
-  font-family: Rubik-Regular;
-  color: #e2e1e7;
-  letter-spacing: 2p;
+  color: var(--light-white);
+  background: var(--dark-purple);
+  width: 330px;
+  height: 350px;
+
 }
+
+
+.box2 {
+  background: var(--gradient-blue-purple);
+}
+
 .box img {
-  display: grid;
   width: 50px;
 }
 
 .box span {
-  font-size: 30px;
+  font-size: 28px;
+  font-weight: 400;
 }
+
 .box p {
-  font-size: 15px;
+  font-size: 17px;
 }
+
 .box a {
   font-size: 13px;
+  letter-spacing: 2px;
   text-decoration: none;
-  border: 2px solid #30a8ff;
+  color: var(--light-white);
+  border: 2px solid var(--light-blue);
   border-radius: 25px;
   font-size: 16px;
-  padding: 10px;
+  padding: 10px 20px;
 }
-.box1,
-.box2,
-.box3 {
-  padding: 30px;
-  background: #130325;
-  border-radius: 25px;
-}
-.box2 {
-  background: var(--gradient-blue-purple);
-}
+
 /* -----Companies----- */
+
 .companies {
+  grid-area: company;
   display: grid;
   justify-items: center;
-  row-gap: 20px;
-  padding: 30px;
+  gap: 20px;
+  padding: 20px 0;
   letter-spacing: 4.1px;
   text-align: center;
-  color: #e2e1e7;
+  color: var(--light-white);
 }
-.companies span {
-  font-size: 30px;
+.companies-icons {
+  padding: 20px 0;
 }
-.companies span > span {
+
+.companies h3 {
   font-size: 30px;
   font-weight: 400;
-  background: linear-gradient(
-    201deg,
-    rgb(253, 253, 253) 10%,
-    rgb(107, 4, 98) 35%,
-    rgb(255, 162, 249) 80%
-  );
+}
+.companies h3 > span {
+  font-size: 30px;
+  font-weight: 400;
+  background: var(--gradient-white-purple-pink);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .companies img {
-  /* display: grid; */
-  grid-template-rows: repeat(2, 1fr);
-  padding: 20px 0;
-  gap: 1.6rem;
+  padding: 10px;
   width: 150px;
   filter: grayscale(1);
 }
-/*  Olena */
-/*  ML Development styling */
+
+.companies img:hover {
+  filter: none;
+}
+
+/* ---- ML Development ---- */
 
 .development {
+  grid-area: development;
   display: grid;
   justify-items: start;
-  row-gap: 20px;
-  padding: 30px;
+
+  gap: 20px;
+  padding: 20px 0;
   letter-spacing: 4px;
   text-align: start;
-  color: #e2e1e7;
+  color: var(--light-white);
 }
-.ML h2 {
-  text-align: center;
-  line-height: 35.55px;
-  background: radial-gradient(
-      608.3% 608.3% at 91.27% 324.92%,
-      #30a8ff 0%,
-      rgba(255, 4, 255, 0.515767) 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+.development span {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 400;
+  background: var(--gradient-blue-purple);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
 }
-.ML h3 {
-  text-align: center;
+
+.development h3 {
+  font-size: 43px;
   font-weight: 500;
-  line-height: 2.6rem;
-  padding-top: 10px;
   letter-spacing: 4.3px;
 }
-.ML p {
-  font-size: 1em;
-  font-style: normal;
-  line-height: 1.5em;
-  padding-top: 10px;
+
+.development p {
+  font-size: 20px;
+  padding: 10px 0;
 }
-.GetStartedBlock {
+
+/* ----- Get Start ----- */
+
+.get-start {
+  grid-area: get-start;
   display: grid;
   justify-content: center;
-}
-.GetStartedBlock h2 {
-  font-weight: 400;
-  font-style: normal;
-  line-height: 2.22rem;
-  letter-spacing: 0.256rem;
-  margin-bottom: 20px;
-  background: radial-gradient(
-      181.29% 181.29% at -42.46% -69.08%,
-      #30a8ff 0%,
-      rgba(232, 0, 232, 0.515767) 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-.GetStartedBlock {
-  display: grid;
   justify-items: center;
-  row-gap: 5px;
-  padding: 30px;
-  font-family: Rubik-light;
-  color: #e2e1e7;
+  gap: 20px;
+  padding: 20px 0px;
+  color: var(--light-white);
   letter-spacing: 2px;
   text-align: center;
-  font-family: Rubik-Regular;
-  color: #e2e1e7;
-  letter-spacing: 2p;
 }
-.GetStartedBlock a {
+
+.get-start span {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 400;
+  background: var(--gradient-purple-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.get-start a {
+  display: grid;
   text-decoration: none;
-  border: 2px solid #30a8ff;
+  border: 2px solid var(--light-blue);
   border-radius: 25px;
   font-size: 16px;
   padding: 10px 30px;
   text-align: center;
-  color: #ededee;
-  font-family: Rubik-Regular;
+  color: var(--light-white);
 }
+
+/* ----- Footer ---- */
 footer {
+  border-top: 0.1px solid var(--light-grey);
   height: 40px;
   font-size: 0.875rem;
   padding: 10px 10px;
   text-align: center;
 }
+
+footer p {
+  color: var(--light-grey);
+}
+
+
 /* -----Desktop----- */
+
 @media screen and (min-width: 900px) {
+  label .hamburger{
+    display: none;
+  }
 }
