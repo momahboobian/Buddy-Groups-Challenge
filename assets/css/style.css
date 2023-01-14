@@ -38,6 +38,7 @@ html {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
 }
+
 h1,
 h2,
 h3,
@@ -75,6 +76,7 @@ header {
   margin-left: 10px;
 }
 
+
 /* ----- Nav menu ----- */
 
 .nav-link {
@@ -108,6 +110,12 @@ label .hamburger {
   display: block;
   transform-origin: center;
   transition: 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 900px) {
+  label .hamburger{
+    display: none;
+  }
 }
 
 label .hamburger:after,
@@ -186,8 +194,6 @@ label a {
 main {
   padding: 30px;
   color: var(--light-white);
-
-
 }
 /* ----- hero ----- */
 
@@ -201,8 +207,8 @@ main {
 }
 .hero h1 {
   font-size: 2.1em;
-
 }
+
 
 .hero h2 {
   font-size: 2.1em;
@@ -214,6 +220,7 @@ main {
 .hero .pricing {
   padding: 10px 0;
 
+
 }
 .hero a {
   font-size: 13px;
@@ -223,6 +230,7 @@ main {
   border: 2px solid var(--light-blue);
   border-radius: 25px;
   font-size: 16px;
+
   font-weight: 400;
   padding: 10px 20px;
   color: var(--light-white);
@@ -325,12 +333,14 @@ main {
   grid-area: development;
   display: grid;
   justify-items: start;
+
   gap: 20px;
   padding: 20px 0;
   letter-spacing: 4px;
   text-align: start;
   color: var(--light-white);
 }
+
 
 .development span {
   text-transform: uppercase;
