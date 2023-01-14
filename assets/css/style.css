@@ -84,8 +84,32 @@ label .hamburger {
 }
 
 @media screen and (min-width: 900px) {
-  label .hamburger{
+  label .hamburger {
     display: none;
+  }
+  label .menu {
+    display: none;
+  }
+
+  label nav {
+    display: flex;
+    
+  }
+  label nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    opacity: 1;
+    top: 3em;
+    left: 19em;
+    gap: 3em;
+  }
+ 
+
+  label nav a {
+    color: #e2e1e7;
   }
 }
 
@@ -142,7 +166,7 @@ label input:checked + .menu + ul {
 label ul {
   z-index: 200;
   position: absolute;
-  top: 50%; 
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
