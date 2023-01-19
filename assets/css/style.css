@@ -376,10 +376,10 @@ button {
 .development {
   grid-area: development;
   display: grid;
-  justify-items: start;
+  justify-items: center;
   justify-content: space-around;
-  gap: 20px;
-  padding: 20px 0;
+  gap: 60px;
+  padding: 30px 0;
   letter-spacing: 4px;
   text-align: start;
   color: var(--light-white);
@@ -404,6 +404,9 @@ button {
   font-size: 20px;
   letter-spacing: 2.1px;
   padding: 10px 0;
+}
+.development .cal-2 {
+  display: none;
 }
 
 /* ----- Get Start ----- */
@@ -517,17 +520,20 @@ footer {
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
-  .footer-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    justify-content: space-between;
+  .development .cal-2 {
+    display: block;
   }
   .startBtn {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin: 0 50px;
+  }
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    justify-content: space-between;
   }
   footer {
     display: grid;
