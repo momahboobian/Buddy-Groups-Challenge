@@ -94,6 +94,9 @@ header {
   width: 3.4rem;
 
 }
+.logo:hover {
+  cursor: pointer;
+}
 
 
 /* ----- Nav menu ----- */
@@ -209,7 +212,6 @@ header {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  
   -webkit-transition: 0.25s 0s ease-in-out;
   transition: 0.25s 0s ease-in-out;
   white-space: nowrap;
@@ -217,11 +219,33 @@ header {
 
 .nav-bar a {
   display: flex;
+  position: relative;
   padding: 10px 0;
   color: var(--purple);
   text-decoration: none;
   font-size: 25px;
 }
+
+.nav-bar a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--white);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.nav-bar a:hover::before {
+  cursor: pointer;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
 
 /* ----- Main ----- */
 
@@ -264,13 +288,14 @@ width: 100%;
   width: 100%;
   height: 100%; 
   object-fit: contain;
--webkit-filter: drop-shadow( 5px 5px 5px #fff);
-     filter: drop-shadow(0 4mm 4mm rgb(22, 2, 24)); 
+  -webkit-filter: drop-shadow( 5px 5px 5px #fff);
+  filter: drop-shadow(0 4mm 4mm rgb(22, 2, 24)); 
 }
 
 /* ----- buttons ----- */
 
 button {
+  position: relative;
   background: none;
   letter-spacing: 2.1px;
   text-decoration: none;
@@ -280,6 +305,19 @@ button {
   font-weight: 400;
   padding: 10px 20px;
   color: var(--light-white);
+  align-items: center;
+
+}
+button:hover {
+  position: relative;
+  border: 2px solid var(--white);
+  transition-duration: .4s;
+  letter-spacing: 2.6px;
+  padding-right: 15px;
+  padding-left: 19px;
+  transition: 0.5s;
+  cursor: pointer;
+
 }
 
 /* ----- Cards ----- */
@@ -381,9 +419,8 @@ button {
   grid-area: development;
   display: grid;
   justify-items: center;
-  /* justify-content: space-around; */
   justify-content: space-between;
-  gap: 60px;
+  gap: 40px;
   max-width: 1050px;
   padding: 30px 0;
   letter-spacing: 4px;
@@ -412,6 +449,10 @@ button {
   padding: 10px 0;
 }
 
+.development .ml-cal-1 {
+  display: grid;
+  gap: 20px;
+}
 .development .ml-cal-2 {
   display: none;
 }
@@ -426,6 +467,8 @@ button {
   height: 423px;
   display: flex;
   gap: 30px;
+  transition: 0.7s ease-in-out;
+
 }
 .data {
   display: grid;
@@ -443,30 +486,46 @@ button {
   border-radius: 10%;
   width: 150px;
   height: 150px;
+  transition: 0.7s ease-in-out;
+
+}
+.ml-img:hover {
+  transform: rotate(360deg);
 }
 .ml-1 {
   background: center / contain no-repeat url(/assets/img/ml/annotate.png);
   background-size: 77px;
+  transition: 0.7s ease-in-out;
 }
 .ml-2 {
   background: center / contain no-repeat url(/assets/img/ml/manage.png);
   background-size: 77px;
+  transition: 0.7s ease-in-out;
+
 }
 .ml-3 {
   background: center / contain no-repeat url(/assets/img/ml/automate.png);
   background-size: 77px;
+    transition: 0.7s ease-in-out;
+
 }
 .ml-4 {
   background: center / contain no-repeat url(/assets/img/ml/evaluate.png);
   background-size: 77px;
+    transition: 0.7s ease-in-out;
+
 }
 .ml-5 {
   background: center / contain no-repeat url(/assets/img/ml/collect.png);
   background-size: 77px;
+    transition: 0.7s ease-in-out;
+
 }
 .ml-6 {
   background: center / contain no-repeat url(/assets/img/ml/generate.png);
   background-size: 77px;
+    transition: 0.7s ease-in-out;
+
 }
 
 /* ----- Get Start ----- */
@@ -558,7 +617,23 @@ footer {
     border: 2px solid var(--light-blue);
     border-radius: 25px;
     padding: 1px 15px;
+    transform-origin: none;
   }
+  .nav-bar li:last-child a::before {
+    height: 0
+  }
+
+
+ .nav-link li:last-child:hover {
+  position: relative;
+  border: 2px solid var(--white);
+  letter-spacing: 2.6px;
+  padding-right: 15px;
+  padding-left: 15px;
+  transition: 0.5s;
+  cursor: pointer;
+
+}
   .hero {
     display: grid;
     grid-template-columns: repeat(auto-fill, 500px);
