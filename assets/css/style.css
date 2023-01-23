@@ -257,11 +257,15 @@ main {
 .hero .pricing {
   padding: 10px 0;
 }
-
-.col-2 img {
+.hero-col-1 {
+width: 100%;
+}
+.hero-col-2 img {
   width: 100%;
   height: 100%; 
   object-fit: contain;
+-webkit-filter: drop-shadow( 5px 5px 5px #fff);
+     filter: drop-shadow(0 4mm 4mm rgb(22, 2, 24)); 
 }
 
 /* ----- buttons ----- */
@@ -377,15 +381,17 @@ button {
   grid-area: development;
   display: grid;
   justify-items: center;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  justify-content: space-between;
   gap: 60px;
+  max-width: 1050px;
   padding: 30px 0;
   letter-spacing: 4px;
   text-align: start;
   color: var(--light-white);
 }
 
-.development span {
+.development .ml-span {
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 400;
@@ -405,8 +411,62 @@ button {
   letter-spacing: 2.1px;
   padding: 10px 0;
 }
-.development .cal-2 {
+
+.development .ml-cal-2 {
   display: none;
+}
+
+.development span {
+  font-size: 21px;
+  color: var(--light-grey);
+}
+
+.data-container {
+  background: center / contain no-repeat url(/assets/img/Combined-Shape.svg);
+  height: 423px;
+  display: flex;
+  gap: 30px;
+}
+.data {
+  display: grid;
+  justify-items: center;
+  justify-content: space-between;
+  align-content: center;
+  gap: 20px;
+
+}
+
+
+.ml-img {
+  position: inherit;
+  border: 1px solid var(--light-grey);
+  border-radius: 10%;
+  width: 150px;
+  height: 150px;
+}
+.ml-1 {
+  background: center / contain no-repeat url(/assets/img/ml/annotate.png);
+  background-size: 77px;
+}
+.ml-2 {
+  background: center / contain no-repeat url(/assets/img/ml/manage.png);
+  background-size: 77px;
+}
+.ml-3 {
+  background: center / contain no-repeat url(/assets/img/ml/automate.png);
+  background-size: 77px;
+}
+.ml-4 {
+  background: center / contain no-repeat url(/assets/img/ml/evaluate.png);
+  background-size: 77px;
+}
+.ml-5 {
+  background: center / contain no-repeat url(/assets/img/ml/collect.png);
+  background-size: 77px;
+}
+.ml-6 {
+  background: center / contain no-repeat url(/assets/img/ml/generate.png);
+  background-size: 77px;
 }
 
 /* ----- Get Start ----- */
@@ -426,6 +486,7 @@ button {
 .get-start span {
   text-transform: uppercase;
   font-size: 30px;
+  letter-spacing: 4px;
   font-weight: 400;
   background: var(--gradient-purple-blue);
   -webkit-background-clip: text;
@@ -434,6 +495,7 @@ button {
 .startBtn {
   display: grid;
   gap: 15px;
+
   margin: 0 50px;
 }
 
@@ -448,9 +510,6 @@ footer {
   color: var(--light-grey);
   justify-items: center;
 }
-
-
-
 
 .tnc a {
   display: none;
@@ -469,7 +528,7 @@ footer {
   header {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    
+    max-width: 1100px;
   }
 
   .hamburger, .menu {
@@ -513,20 +572,21 @@ footer {
     padding: 20px 0;
   }
 
-  .col-2 img {
+  .ml-col-2 img {
     max-width: 550px;
   }
 
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
-  .development .cal-2 {
+  .development .ml-cal-2 {
     display: block;
   }
   .startBtn {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    column-gap: 100px;
     margin: 0 50px;
   }
   .footer-container {
