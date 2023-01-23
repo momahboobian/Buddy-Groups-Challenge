@@ -320,6 +320,9 @@ button:hover {
 
 }
 
+.flip {
+  transform: rotateY(180deg);
+}
 /* ----- Cards ----- */
 .cards-container {
   grid-area: card;
@@ -355,6 +358,7 @@ button:hover {
 .box2 {
   background: var(--gradient-blue-purple);
 }
+
 
 .box img {
   width: 50px;
