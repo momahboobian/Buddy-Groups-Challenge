@@ -31,4 +31,7 @@ formSignInButton.style.border = "2px solid #30a8ff";
 formSignInButton.style.borderRadius = "4em";
 formSignInButton.style.width = "8em";
 formSignInButton.style.height = "2.5em";
-formSignInButton.style.color = "#4b004b";
+formSignInButton.style.color = "#e2e1e7";
+
+const formSignLink = document.getElementsByClassName("sign-link");
+formSignLink.style.color = "#9a9a9eba";
