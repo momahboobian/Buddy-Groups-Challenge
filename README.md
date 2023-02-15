@@ -9,4 +9,3 @@
 ## Desktop Version
 
 ![AI Better Life](/assets/landing-page-1.png)
-gh re
