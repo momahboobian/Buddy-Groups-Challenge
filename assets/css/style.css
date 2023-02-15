@@ -89,12 +89,53 @@ header {
   justify-content: space-between;
   padding: 20px 30px;
 }
-
 .logo {
+  display: flex;
+  position: relative;
+}
+.logo-img {
   width: 3.4rem;
 }
 .logo:hover {
   cursor: pointer;
+
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color: var(--white);
+  bottom: 0;
+  left: 4px;
+  transform-origin: left;
+  transform: rotate(-67deg) scaleX(0);
+  transition: transform .5s ease-in-out;
+}
+.logo::after {
+  content: '';
+  position: absolute;
+  width: 57px;
+  height: 2px;
+  background-color: var(--white);
+  top: 2px;
+  left: 27px;
+  transform-origin: left;
+  transform: rotate(67deg) scaleX(0);
+  transition: transform .5s ease-in-out;
+}
+
+
+.logo:hover::before {
+  cursor: pointer;
+  transform-origin: left;
+  transform: rotate(-67deg)scaleX(1);
+}
+
+
+.logo:hover::after {
+  transform: rotate(67deg)scaleX(1);
 }
 
 /* ----- Nav menu ----- */
